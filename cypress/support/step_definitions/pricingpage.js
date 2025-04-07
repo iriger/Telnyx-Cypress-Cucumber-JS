@@ -33,15 +33,13 @@ When("User scrolls to Enjoy all the benefits sections", () => {
 });
 Then("User sees three blocks in the section with titles 'Free in-house support', 'Portal access', 'Automatic discounts'", () => {
   pricingPage.allBenefitsBlocks().should("have.length", 3);
+
   pricingPage
-    .firstBenefitBlockTitle()
-    .should("include.text", "Free in-house support");
-  pricingPage
-    .secondBenefitBlockTitle()
-    .should("include.text", "Portal access");
-  pricingPage
-    .thirdBenefitBlockTitle()
-    .should("include.text", "Automatic discounts");
+  .benefitBlockTitle(1).should("include.text", "Free in-house support");
+pricingPage
+  .benefitBlockTitle(2).should("include.text", "Portal access");
+pricingPage
+  .benefitBlockTitle(3).should("include.text", "Automatic discounts");
 });
 
 When("User scrolls to Communications section", () => {

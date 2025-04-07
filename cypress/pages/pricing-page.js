@@ -23,14 +23,14 @@ export class PricingPage {
   allBenefitsBlocks() {
     return cy.get("ul.c-cUhiIV li");
   }
-  firstBenefitBlockTitle() {
-    return cy.get("#599Qs9ih0ykXM1lAe3zMqv");
-  }
-  secondBenefitBlockTitle() {
-    return cy.get("#3qDfqRTIdq5MAy3eUq3lCp");
-  }
-  thirdBenefitBlockTitle() {
-    return cy.get("#7m7wH75h848E7Pjq9C5L1d");
+  benefitBlockTitle(index) {
+    const selectors = {
+      1: "#599Qs9ih0ykXM1lAe3zMqv",
+      2: "#3qDfqRTIdq5MAy3eUq3lCp",
+      3: "#7m7wH75h848E7Pjq9C5L1d",
+         };
+     const selector = selectors[index];
+     return cy.get(selector);
   }
   communicationsSection() {
     return cy.get("#communications > .c-fKwEGa");

@@ -6,7 +6,7 @@ export class SolutionsPage {
     return cy.get("#7nZfryiE5nWZ5TSwg6oaYx");
   }
   useCasesSectionTitle() {
-    return cy.get(".c-kkaQeY > :nth-child(1) > .c-PJLV");
+    return cy.xpath("//strong[@class='c-PJLV c-fNZqWL']");
   }
   filterButton() {
     return cy.get("[id*='Rqdrdm']");

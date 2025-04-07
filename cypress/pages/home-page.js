@@ -18,24 +18,24 @@ export class HomePage {
     return cy.get(".c-jLWzSx");
   }
   allSolutionsLink() {
-    return cy.get("#vlQzwhQtDzbGJZ28xmtRy > .c-EICMy > .c-gSgpnm");
+    return cy.xpath("//p[normalize-space()='See all solutions']");
   }
-  moreInfoSection(){
-    return cy.get('.c-gvjiJA > .c-jpDoWL');
+  moreInfoSection() {
+    return cy.get(".c-gvjiJA > .c-jpDoWL");
   }
-  selectedArtile(){
+  selectedArtile() {
     return cy.get("[id*='ai-self-service-system']");
   }
-  selectedArtileTitle(){
-    return cy.get('.c-hfgiSY > :nth-child(3) > .c-PJLV')
+  selectedArtileTitle() {
+    return cy.get(".c-hfgiSY > :nth-child(3) > .c-PJLV");
   }
-  footer(){
-    return cy.get('.c-hfgiSY-ildsFlb-css');
+  footer() {
+    return cy.get(".c-hfgiSY-ildsFlb-css");
   }
-  selectedLinkFooter(){
-    return cy.get(':nth-child(5) > .c-cTLmKz > :nth-child(4) > .c-fZcwcz');
+  selectedLinkFooter() {
+    return cy.get(":nth-child(5) > .c-cTLmKz > :nth-child(4) > .c-fZcwcz");
   }
-  selectedLinkFooterTitle(){
+  selectedLinkFooterTitle() {
     return cy.get("h1.c-PJLV.c-fGbiyG.c-PJLV-cHtIMp-dark-false");
   }
 
@@ -43,21 +43,21 @@ export class HomePage {
     cy.visit("/");
   }
   navigateToPricingPage() {
-    this.pricingLink().click();
+    this.pricingLink().click({force: true});
   }
   productsLinkClick() {
-    this.productsLink().click();
+    this.productsLink().click({force: true});
   }
   solutionsButtonClick() {
-    this.solutionsButton().click();
+    this.solutionsButton().click({force: true});
   }
   allSolutionsLinkClick() {
-    this.allSolutionsLink().click();
+    this.allSolutionsLink().click({force: true});
   }
-  selectArtile(){
-    this.selectedArtile().click();
+  selectArtile() {
+    this.selectedArtile().click({force: true});
   }
-  selectLinkFooter(){
-    this.selectedLinkFooter().click();
+  selectLinkFooter() {
+    this.selectedLinkFooter().click({force: true});
   }
 }
