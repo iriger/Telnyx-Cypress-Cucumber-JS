@@ -1,4 +1,4 @@
-const { defineConfig } = require("Cypress");
+const { defineConfig } = require("cypress");
 const {addCucumberPreprocessorPlugin}=require ("@badeball/cypress-cucumber-preprocessor");
 const createBundler = require ("@bahmutov/cypress-esbuild-preprocessor");
 const esbuildPlugin= require ("@badeball/cypress-cucumber-preprocessor/esbuild");
