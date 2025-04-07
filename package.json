@@ -13,7 +13,8 @@
   "keywords": [
     "Telnyx",
     "Cypress",
-    "Cucumber"
+    "Cucumber",
+    "Allure reports"
   ],
   "author": "Iryna Germash",
   "license": "ISC",
